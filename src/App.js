@@ -1,11 +1,9 @@
-import Navbar from "../src/container/Navabar";
+import Home from "./containers/Home";
 
 function App() {
   return (
     <div>
-      <nav>
-        <Navbar />
-      </nav>
+      <Home />
     </div>
   );
 }
