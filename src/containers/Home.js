@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 const Home = () => {
   //Access all products from store
   const products = useSelector((state) => state);
-  const API_URL = "https://fakestoreapi.com/products?limit=4";
+  const API_URL = "https://fakestoreapi.com/products";
   const dispatch = useDispatch();
 
   const fetchProducts = async () => {

@@ -1,11 +1,12 @@
 import React from "react";
 import pixel_6 from "../Images/pixel6.png";
 import ProductFeed from "./ProductFeed";
+import PromotionFeed from "./PromotionFeed";
 
 const HomeView = () => {
   return (
     <div>
-      <div className=" bg-light-blue">
+      <div className=" Hero_Banner bg-light-blue">
         <div
           className="grid lg:grid-cols-2 pt-10
       "
@@ -38,17 +39,22 @@ const HomeView = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="flex items-center space-x-10 mt-12">
-          <h1 className=" sm:text-xl md:text-2xl lg:text-3xl font-bold">
-            {" "}
-            Best Selling Products
-          </h1>
-          <a className="text-gray-400 text-sm md:text-base" href="#">
-            View All
-          </a>
+        <div className="Product_Feed">
+          <div className="flex items-center space-x-10 mt-12">
+            <h1 className=" sm:text-xl md:text-2xl lg:text-3xl font-bold">
+              {" "}
+              Best Selling Products
+            </h1>
+            <a className="text-gray-400 text-sm md:text-base" href="#">
+              View All
+            </a>
+          </div>
+          <div>
+            <ProductFeed />
+          </div>
         </div>
-        <div>
-          <ProductFeed />
+        <div className="Promotions my-10">
+          <PromotionFeed />
         </div>
       </div>
     </div>

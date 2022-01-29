@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import { useSelector } from "react-redux";
 
 const ProductFeed = () => {
   const products = useSelector((state) => state.allProducts.products);
 
   return (
-    <div className="grid grid-flow-row-dense xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+    <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
       {products.length > 0 ? (
         <>
-          {products[0]?.map((product) => {
+          {products[0]?.slice(0, 4).map((product) => {
             return (
               <div
                 className="flex flex-col items-center m-5 p-5 bg-white rounded-3xl mt-12 drop-shadow-lg"
