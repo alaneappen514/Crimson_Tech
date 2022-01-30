@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../Images/Logo.png";
 import "../styles/navbar.css";
 
@@ -11,9 +11,9 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="flex items-center justify-between flex-wrap bg-black px-12 py-6">
+      <nav className="flex items-center justify-between flex-wrap bg-black px-6 sm:px-12 py-6">
         <div className="lg:flex items-center lg:space-x-10">
-          <img className="w-20 h-20 rounded-full " src={logo} alt="logo"></img>
+          <img className="w-14 h-14 rounded-full " src={logo} alt="logo"></img>
           <a
             className="navlinks text-white-smoke hover:text-slate-400"
             href="#"
@@ -41,12 +41,15 @@ const Navbar = () => {
             </button>
           </form>
         </div>
-        <div className="lg:hidden">
+        <div className="lg:hidden ">
+          <button>
+            <i class="text-white-smoke hover:text-slate-400 inline-flex p-3 rounded  fas fa-shopping-cart text-2xl sm:text-3xl mr-5"></i>
+          </button>
           <button onClick={menuBar}>
             {navbarOpen ? (
-              <i class="text-dark-green hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded far fas fa-times fa-2x"></i>
+              <i class="text-dark-green hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded far fas fa-times text-2xl sm:text-3xl"></i>
             ) : (
-              <i className="text-dark-green hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded fas fa-bars fa-2x"></i>
+              <i className="text-dark-green hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded fas fa-bars text-2xl sm:text-3xl"></i>
             )}
           </button>
         </div>
