@@ -2,6 +2,7 @@ import React from "react";
 import pixel_6 from "../Images/pixel6.png";
 import ProductFeed from "./ProductFeed";
 import PromotionFeed from "./PromotionFeed";
+import Footer from "./Footer";
 
 const HomeView = () => {
   return (
@@ -56,6 +57,9 @@ const HomeView = () => {
         <div className="Promotions my-10">
           <PromotionFeed />
         </div>
+      </div>
+      <div className="Footer pt-3">
+        <Footer />
       </div>
     </div>
   );

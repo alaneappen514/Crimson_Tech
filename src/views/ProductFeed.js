@@ -24,14 +24,20 @@ const ProductFeed = () => {
                   {product.title}
                 </h2>
                 <div className="text-center">
-                  <div>
-                    {/* //converts rate to an int and fills up an Array based on the number
+                  <div className="flex justify-center ">
+                    <div>
+                      {/* //converts rate to an int and fills up an Array based on the number
                     /maps the icon */}
-                    {Array(parseInt(product.rating.rate))
-                      .fill()
-                      .map((_, i) => (
-                        <i className="text-crimson-red fas fa-star" key={i}></i>
-                      ))}
+                      {Array(parseInt(product.rating.rate))
+                        .fill()
+                        .map((_, i) => (
+                          <i
+                            className="text-crimson-red fas fa-star"
+                            key={i}
+                          ></i>
+                        ))}
+                    </div>
+                    <p className="mx-2"> {product.rating.count}</p>
                   </div>
                   <hr className="my-3 "></hr>
                   <h2 className="lg:text-xl text-lg font-extrabold">
@@ -51,7 +57,10 @@ const ProductFeed = () => {
           {Array(4)
             .fill()
             .map((_, i) => (
-              <div class="border border-slate-300 m-5 p-5  shadow rounded-xl h-80">
+              <div
+                class="border border-slate-300 m-5 p-5  shadow rounded-xl h-80"
+                key={i}
+              >
                 <div class="animate-pulse  space-x-4">
                   <div class="rounded-full bg-slate-200 h-20 w-20"></div>
                   <div class="flex-1 space-y-6 py-1 ">
