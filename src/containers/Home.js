@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Navbar from "../views/Navabar";
 import HomeView from "../views/HomeView";
 import axios from "axios";
 import { setProducts } from "../redux/actions/productActions";
@@ -25,13 +24,9 @@ const Home = () => {
 
   return (
     <div>
-      <nav>
-        <Navbar />
-      </nav>
       <section>
         <HomeView />
       </section>
-      <footer></footer>
     </div>
   );
 };

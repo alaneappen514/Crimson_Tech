@@ -58,9 +58,6 @@ const HomeView = () => {
           <PromotionFeed />
         </div>
       </div>
-      <div className="Footer pt-3">
-        <Footer />
-      </div>
     </div>
   );
 };
