@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import HomeView from "../views/HomeView";
+import HomeView from "../views/Home/HomeView";
 import axios from "axios";
 import { setProducts } from "../redux/actions/productActions";
 import { useDispatch, useSelector } from "react-redux";

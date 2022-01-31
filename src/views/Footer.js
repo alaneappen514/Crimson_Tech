@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="bg-black mx-auto  p-10 ">
       <div className="flex flex-col xl:flex-row xl:space-y-0 space-y-16 items-center justify-around">
         <img className="w-56 h-56 rounded-full" src={logo} alt="logo"></img>
-        <div className="flex flex-wrap items-center justify-evenly text-white-smoke ">
+        <div className="flex flex-wrap justify-center sm:justify-evenly text-white-smoke ">
           <div className="max-w-xs m-4">
             <h1 className="text-lg text-dark-green font-extrabold">
               My Account
@@ -35,7 +35,7 @@ const Footer = () => {
               Contact Us
             </a>
             <a href="#" className="block hover:text-slate-400">
-              Protection and Support Plans
+              Protection and Support
             </a>
             <a href="#" className="block hover:text-slate-400">
               Recycling Program

@@ -1,8 +1,7 @@
 import React from "react";
-import pixel_6 from "../Images/pixel6.png";
-import ProductFeed from "./ProductFeed";
-import PromotionFeed from "./PromotionFeed";
-import Footer from "./Footer";
+import pixel_6 from "../../Images/pixel6.png";
+import ProductFeed from "../Home/ProductFeed";
+import PromotionFeed from "../Home/PromotionFeed";
 
 const HomeView = () => {
   return (
@@ -16,7 +15,7 @@ const HomeView = () => {
             <div>
               <h1
                 style={{ lineHeight: "1.5em" }}
-                className="text-3xl md:text-4xl lg:text-5xl font-extrabold"
+                className="text-3xl md:text-4xl font-extrabold"
               >
                 Better than Ever <br></br>Pixel 6
               </h1>
@@ -42,7 +41,7 @@ const HomeView = () => {
       <div className="container mx-auto px-4">
         <div className="Product_Feed">
           <div className="flex items-center space-x-10 mt-12">
-            <h1 className=" sm:text-xl md:text-2xl lg:text-3xl font-bold">
+            <h1 className=" sm:text-xl md:text-2xl font-bold">
               {" "}
               Best Selling Products
             </h1>

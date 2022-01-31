@@ -17,13 +17,13 @@ const PromotionFeed = () => {
                 key={product.id}
               >
                 <div className="text-center max-w-lg">
-                  <h1 className=" text-lg sm:text-2xl md:text-2xl lg:text-3xl font-extrabold line-clamp-1">
+                  <h1 className=" text-lg sm:text-2xl  font-extrabold line-clamp-1">
                     {product.title}
                   </h1>
                   <p
                     className={` ${
                       product.id % 3 === 0 ? `text-black` : `text-white-smoke`
-                    } my-5 text-clip overflow-hidden line-clamp-3 sm:line-clamp-2 md:line-clamp-2 lg:line-clamp-2`}
+                    } my-5 text-clip text-sm sm:text-base overflow-hidden line-clamp-3 sm:line-clamp-2 md:line-clamp-2 lg:line-clamp-2`}
                   >
                     {product.description}
                   </p>
