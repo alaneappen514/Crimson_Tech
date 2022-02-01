@@ -86,7 +86,7 @@ const Footer = () => {
           Terms and Conditions
         </a>
         <a href="#" className=" m-5 hover:text-slate-400">
-          Intener-based ads
+          Internet-based ads
         </a>
         <a href="#" className=" m-5 hover:text-slate-400">
           Privacy Policy
