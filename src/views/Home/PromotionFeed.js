@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const PromotionFeed = () => {
   const products = useSelector((state) => state.allProducts.products);
@@ -27,15 +28,17 @@ const PromotionFeed = () => {
                   >
                     {product.description}
                   </p>
-                  <button
-                    className={`border-4 ${
-                      product.id % 3 === 0
-                        ? `border-black hover:bg-black`
-                        : `border-white-smoke hover:bg-white-smoke hover:text-slate-800 text-white-smoke`
-                    } hover:text-white-smoke px-4 py-3 text-sm md:text-base`}
-                  >
-                    Learn More
-                  </button>
+                  <Link to={`/product/${product.id}`}>
+                    <button
+                      className={`border-4 ${
+                        product.id % 3 === 0
+                          ? `border-black hover:bg-black`
+                          : `border-white-smoke hover:bg-white-smoke hover:text-slate-800 text-white-smoke`
+                      } hover:text-white-smoke px-4 py-3 text-sm md:text-base`}
+                    >
+                      Learn More
+                    </button>
+                  </Link>
                 </div>
                 <img
                   className=" h-72 w-72 lg:h-96 lg:w-96 mt-10 object-contain"
