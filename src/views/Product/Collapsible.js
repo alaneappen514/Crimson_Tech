@@ -19,9 +19,9 @@ const Collapsible = (props) => {
       <div
         className={`${
           open ? "" : "hidden"
-        } bg-white mx-2 h-72 p-5 flex items-center border border-gray-600 `}
+        } bg-white mx-2  p-5 border rounded-b-lg border-gray-600 `}
       >
-        <p>{props.description}</p>
+        <div>{props.description}</div>
       </div>
     </div>
   );
