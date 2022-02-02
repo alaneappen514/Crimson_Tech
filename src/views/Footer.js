@@ -93,7 +93,7 @@ const Footer = () => {
         </a>
       </div>
       <div className="flex justify-center space-x-6 mt-6 ">
-        <i class="fab fa-facebook-square text-white-smoke fa-2x hover:text-slate-400 "></i>
+        <i className="fab fa-facebook-square text-white-smoke fa-2x hover:text-slate-400 "></i>
         <i className="fab fa-instagram text-white-smoke fa-2x hover:text-slate-400"></i>
         <i className="fab fa-youtube text-white-smoke fa-2x hover:text-slate-400"></i>
       </div>

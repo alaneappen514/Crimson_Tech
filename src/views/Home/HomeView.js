@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import pixel_6 from "../../Images/pixel6.png";
 import ProductFeed from "../Home/ProductFeed";
 import PromotionFeed from "../Home/PromotionFeed";
@@ -45,9 +46,11 @@ const HomeView = () => {
               {" "}
               Best Selling Products
             </h1>
-            <a className="text-gray-400 text-sm md:text-base" href="#">
-              View All
-            </a>
+            <Link to={"/all_products"}>
+              <a className="text-gray-400 text-sm md:text-base" href="#">
+                View All
+              </a>
+            </Link>
           </div>
           <div>
             <ProductFeed />

@@ -21,12 +21,14 @@ const Navbar = () => {
               alt="logo"
             ></img>
           </Link>
-          <a
-            className="navlinks text-white-smoke hover:text-slate-400"
-            href="#"
-          >
-            Shop
-          </a>
+          <Link to="/all_products">
+            <span
+              className="navlinks text-white-smoke hover:text-slate-400"
+              href="#"
+            >
+              Shop
+            </span>
+          </Link>
           <a
             className="navlinks text-white-smoke hover:text-slate-400"
             href="#"
@@ -50,11 +52,11 @@ const Navbar = () => {
         </div>
         <div className="lg:hidden ">
           <button>
-            <i class="text-white-smoke hover:text-slate-400 inline-flex p-3 rounded  fas fa-shopping-cart text-2xl sm:text-3xl mr-5"></i>
+            <i className="text-white-smoke hover:text-slate-400 inline-flex p-3 rounded  fas fa-shopping-cart text-2xl sm:text-3xl mr-5"></i>
           </button>
           <button onClick={menuBar}>
             {navbarOpen ? (
-              <i class="text-white-smoke hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded far fas fa-times text-2xl sm:text-3xl"></i>
+              <i className="text-white-smoke hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded far fas fa-times text-2xl sm:text-3xl"></i>
             ) : (
               <i className="text-white-smoke hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded fas fa-bars text-2xl sm:text-3xl"></i>
             )}
@@ -80,12 +82,14 @@ const Navbar = () => {
             </button>
           </form>
           <div className="lg:flex lg:mt-0 mt-10 space-y-5 lg:space-y-0">
-            <a
-              className="block lg:hidden p-3 lg:p-0  text-white-smoke  hover:bg-dark-green"
-              href="#"
-            >
-              Shop
-            </a>
+            <Link to="/all_products">
+              <span
+                className="block lg:hidden p-3 lg:p-0  text-white-smoke  hover:bg-dark-green"
+                href="#"
+              >
+                Shop
+              </span>
+            </Link>
             <a
               className="block lg:hidden p-3 lg:p-0  text-white-smoke hover:bg-dark-green"
               href="#"
