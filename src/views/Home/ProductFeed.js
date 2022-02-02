@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const ProductFeed = () => {
@@ -43,9 +44,11 @@ const ProductFeed = () => {
                   <h2 className="lg:text-xl text-lg font-extrabold">
                     ${product.price}
                   </h2>
-                  <button className="border-4 border-crimson-red hover:bg-crimson-red hover:text-white-smoke my-3 px-4 py-3 text-sm md:text-base">
-                    Buy Now
-                  </button>
+                  <Link to={`/product/${product.id}`}>
+                    <button className="border-4 border-crimson-red hover:bg-crimson-red hover:text-white-smoke my-3 px-4 py-3 text-sm md:text-base">
+                      Buy Now
+                    </button>
+                  </Link>
                 </div>
               </div>
             );
@@ -53,7 +56,7 @@ const ProductFeed = () => {
         </>
       ) : (
         <>
-          {" "}
+          {/* //Loading containers */}{" "}
           {Array(4)
             .fill()
             .map((_, i) => (

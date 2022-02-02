@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../Images/Logo.png";
+import { Link } from "react-router-dom";
 import "../styles/navbar.css";
 
 const Navbar = () => {
@@ -13,7 +14,13 @@ const Navbar = () => {
     <div>
       <nav className="flex items-center justify-between flex-wrap bg-black px-6 sm:px-12 py-6">
         <div className="lg:flex items-center lg:space-x-10">
-          <img className="w-14 h-14 rounded-full " src={logo} alt="logo"></img>
+          <Link to="/">
+            <img
+              className="w-14 h-14 rounded-full "
+              src={logo}
+              alt="logo"
+            ></img>
+          </Link>
           <a
             className="navlinks text-white-smoke hover:text-slate-400"
             href="#"
@@ -47,9 +54,9 @@ const Navbar = () => {
           </button>
           <button onClick={menuBar}>
             {navbarOpen ? (
-              <i class="text-dark-green hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded far fas fa-times text-2xl sm:text-3xl"></i>
+              <i class="text-white-smoke hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded far fas fa-times text-2xl sm:text-3xl"></i>
             ) : (
-              <i className="text-dark-green hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded fas fa-bars text-2xl sm:text-3xl"></i>
+              <i className="text-white-smoke hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded fas fa-bars text-2xl sm:text-3xl"></i>
             )}
           </button>
         </div>
