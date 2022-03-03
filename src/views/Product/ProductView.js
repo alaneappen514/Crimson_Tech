@@ -2,11 +2,19 @@ import React from "react";
 import { useSelector } from "react-redux";
 import Collapsible from "./Collapsible";
 import Reviews from "./Reviews";
+import { useNavigate } from "react-router-dom";
 const ProductView = () => {
+  const history = useNavigate();
   const product = useSelector((state) => state.product);
 
   return (
-    <div className="container mx-auto p-4 my-28 md:my-40 lg:my-54">
+    <div className="container mx-auto p-4 my-16">
+      <p
+        className="mb-16 hover:underline cursor-pointer"
+        onClick={() => history(-1)}
+      >
+        _Back
+      </p>
       {Object.keys(product).length !== 0 ? (
         <>
           <div className="flex flex-wrap justify-evenly ">
@@ -16,8 +24,8 @@ const ProductView = () => {
               alt="product_img"
             ></img>
             <div className="mt-10 sm:m-10 w-full lg:w-1/2 flex flex-col justify-center p-10 rounded-3xl bg-white drop-shadow-lg relative">
-              <div class="absolute top-0 right-0 p-5">
-                <i class="far fa-heart text-2xl sm:text-3xl"></i>
+              <div className="absolute top-0 right-0 p-5">
+                <i className="far fa-heart text-2xl sm:text-3xl"></i>
               </div>
               <div className="space-y-2">
                 <h1 className="text-lg sm:text-2xl   font-extrabold">
@@ -29,18 +37,21 @@ const ProductView = () => {
                     .map((_, i) => (
                       <i className="text-crimson-red fas fa-star" key={i}></i>
                     ))}
-                  <p className="mx-2">{product.rating.count}</p>
+                  <p className="mx-2">{product.rating.rate}</p>
                 </div>
               </div>
               <div className="my-4">
                 <h3 className="sm:text-lg  font-extrabold">Category:</h3>
-                <p className="text-base">{product.category}</p>
+                <p className="text-base">
+                  {product.category[0].toUpperCase() +
+                    product.category.substring(1)}
+                </p>
               </div>
               <div className="text-center space-y-2">
                 <h1 className="text-lg md:text-2xl font-extrabold">
                   ${product.price}
                 </h1>
-                <button className="bg-crimson-red text-white-smoke w-full px-4 py-3  text-base sm:text-lg">
+                <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 ">
                   Add to Cart
                 </button>
               </div>

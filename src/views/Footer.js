@@ -11,16 +11,16 @@ const Footer = () => {
             <h1 className="text-lg text-dark-green font-extrabold">
               My Account
             </h1>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block text-sm hover:text-slate-400">
               Check Order Status
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block text-sm hover:text-slate-400">
               Returns and Exchagnes
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block text-sm hover:text-slate-400">
               Shipping, Delivery, Pickup
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block text-sm hover:text-slate-400">
               Rewards Program
             </a>
           </div>
@@ -28,16 +28,16 @@ const Footer = () => {
             <h1 className="text-lg text-dark-green font-extrabold">
               Support Services
             </h1>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block hover:text-slate-400 text-sm">
               View Support Center
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block hover:text-slate-400 text-sm">
               Contact Us
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block hover:text-slate-400 text-sm">
               Protection and Support
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block hover:text-slate-400 text-sm">
               Recycling Program
             </a>
           </div>
@@ -45,16 +45,16 @@ const Footer = () => {
             <h1 className="text-lg text-dark-green font-extrabold">
               About Crimson Tech
             </h1>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block hover:text-slate-400 text-sm">
               Our Story
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block hover:text-slate-400 text-sm">
               Careers
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block hover:text-slate-400 text-sm">
               Newsroom
             </a>
-            <a href="#" className="block hover:text-slate-400">
+            <a href="#" className="block hover:text-slate-400 text-sm">
               Corporate Responsibility
             </a>
           </div>
@@ -71,7 +71,7 @@ const Footer = () => {
               name="emailDeals"
               className="w-full p-2 roundedl-lg placeholder:italic border-gray-600 border-2 focus:outline-none"
             ></input>
-            <button className="px-4 py-3 my-5 text-sm md:text-base bg-dark-green text-white-smoke hover:bg-slate-400 hover:text-black">
+            <button className="px-4 py-3 my-5 text-sm  bg-dark-green text-white-smoke hover:bg-slate-400 hover:text-black">
               {" "}
               Sign Up
             </button>
@@ -79,16 +79,16 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-white   mt-16 flex flex-wrap justify-center">
-        <a href="#" className=" m-5 hover:text-slate-400">
+        <a href="#" className=" m-5 hover:text-slate-400 text-sm">
           Accessibility
         </a>
-        <a href="#" className=" m-5 hover:text-slate-400">
+        <a href="#" className=" m-5 hover:text-slate-400 text-sm">
           Terms and Conditions
         </a>
-        <a href="#" className=" m-5 hover:text-slate-400">
+        <a href="#" className=" m-5 hover:text-slate-400 text-sm">
           Internet-based ads
         </a>
-        <a href="#" className=" m-5 hover:text-slate-400">
+        <a href="#" className=" m-5 hover:text-slate-400 text-sm">
           Privacy Policy
         </a>
       </div>

@@ -10,3 +10,10 @@ body {
 .rec.rec-pagination {
   display: none;
 }
+
+hr {
+  border: none;
+  height: 0.2px;
+  /* Set the hr color */
+  background-color: rgb(158, 158, 158); /* Modern Browsers */
+}

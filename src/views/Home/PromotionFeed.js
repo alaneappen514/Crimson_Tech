@@ -6,7 +6,7 @@ const PromotionFeed = () => {
   const products = useSelector((state) => state.allProducts.products);
 
   return (
-    <div className="grid lg:grid-cols-2 ">
+    <div className="grid lg:grid-cols-2 mt-16">
       {products.length > 0 ? (
         <>
           {products[0]?.slice(8, 12).map((product) => {
@@ -14,7 +14,7 @@ const PromotionFeed = () => {
               <div
                 className={`flex flex-col items-center m-2 p-9 sm:p-10 md:p-14 lg:p-16 ${
                   product.id % 3 === 0 ? `bg-white` : `bg-dark-green`
-                } rounded-lg mt-12 drop-shadow-lg `}
+                } rounded-lg drop-shadow-lg `}
                 key={product.id}
               >
                 <div className="text-center max-w-lg">
@@ -34,7 +34,7 @@ const PromotionFeed = () => {
                         product.id % 3 === 0
                           ? `border-black hover:bg-black`
                           : `border-white-smoke hover:bg-white-smoke hover:text-slate-800 text-white-smoke`
-                      } hover:text-white-smoke px-4 py-3 text-sm md:text-base`}
+                      } hover:text-white-smoke px-4 py-3 text-sm `}
                     >
                       Learn More
                     </button>

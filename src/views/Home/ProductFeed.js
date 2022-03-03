@@ -7,7 +7,7 @@ const ProductFeed = () => {
 
   return (
     <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
-      {products.length > 0 ? (
+      {Object.keys(products).length !== 0 ? (
         <>
           {products[0]?.slice(0, 4).map((product) => {
             return (
@@ -38,14 +38,14 @@ const ProductFeed = () => {
                           ></i>
                         ))}
                     </div>
-                    <p className="mx-2"> {product.rating.count}</p>
+                    <p className="mx-2"> {product.rating.rate}</p>
                   </div>
                   <hr className="my-3 "></hr>
                   <h2 className="lg:text-xl text-lg font-extrabold">
                     ${product.price}
                   </h2>
                   <Link to={`/product/${product.id}`}>
-                    <button className="border-4 border-crimson-red hover:bg-crimson-red hover:text-white-smoke my-3 px-4 py-3 text-sm md:text-base">
+                    <button className="border-4 border-crimson-red hover:bg-crimson-red hover:text-white-smoke my-3 px-4 py-3 text-sm ">
                       Buy Now
                     </button>
                   </Link>

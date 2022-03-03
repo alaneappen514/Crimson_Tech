@@ -14,7 +14,7 @@ function App() {
         </nav>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/all_products" element={<AllProductsView />} />
+          <Route path="/all_products/" element={<AllProductsView />} />
           <Route path="/product/:productId" element={<Product />} />
         </Routes>
         <footer className="pt-3">
