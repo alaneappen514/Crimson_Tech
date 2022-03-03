@@ -23,14 +23,14 @@ const Navbar = () => {
           </Link>
           <Link to="/all_products">
             <span
-              className="navlinks text-white-smoke hover:text-slate-400"
+              className="text-sm navlinks text-white-smoke hover:text-slate-400"
               href="#"
             >
               Shop
             </span>
           </Link>
           <a
-            className="navlinks text-white-smoke hover:text-slate-400"
+            className="text-sm navlinks text-white-smoke hover:text-slate-400"
             href="#"
           >
             Deals
@@ -83,33 +83,33 @@ const Navbar = () => {
           </form>
           <div className="lg:flex lg:mt-0 mt-10 space-y-5 lg:space-y-0">
             <Link to="/all_products">
-              <span
-                className="block lg:hidden p-3 lg:p-0  text-white-smoke  hover:bg-dark-green"
+              <a
+                className="block text-sm lg:hidden p-3 lg:p-0  text-white-smoke  hover:bg-dark-green"
                 href="#"
               >
                 Shop
-              </span>
+              </a>
             </Link>
             <a
-              className="block lg:hidden p-3 lg:p-0  text-white-smoke hover:bg-dark-green"
+              className="block text-sm lg:hidden p-3 lg:p-0  text-white-smoke hover:bg-dark-green"
               href="#"
             >
               Deals
             </a>
             <a
-              className="block  p-3 lg:p-0  text-white-smoke  lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green lg:mr-12"
+              className="block text-sm p-3 lg:p-0  text-white-smoke  lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green lg:mr-12"
               href="#"
             >
               Store
             </a>
             <a
-              className=" block p-3 lg:p-0  text-white-smoke lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green lg:mr-12"
+              className=" block text-sm  p-3 lg:p-0  text-white-smoke lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green lg:mr-12"
               href="#"
             >
               Account
             </a>
             <a
-              className="block p-3 lg:p-0 text-white-smoke lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green"
+              className="block text-sm p-3 lg:p-0 text-white-smoke lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green"
               href="#"
             >
               Cart

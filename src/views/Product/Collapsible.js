@@ -13,7 +13,7 @@ const Collapsible = (props) => {
         onClick={openCollapsible}
         className=" cursor-pointer p-10 items-center flex justify-between rounded-lg mt-16 border-2 border-gray-400"
       >
-        <h1 className="text-2xl font-bold">{props.title}</h1>{" "}
+        <h1 className="text-lg sm:text-2xl font-bold">{props.title}</h1>{" "}
         <i className="text-dark-green fas fa-caret-down fa-2x"></i>
       </div>
       <div

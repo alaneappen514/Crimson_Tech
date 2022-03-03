@@ -1,30 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import FilterView from "./FilterView";
-const AllProductsView = () => {
+import SortView from "./SortView";
+import Products from "../AllProducts/Products";
+import { Link } from "react-router-dom";
+
+const AllProductsView = (props) => {
+  const { products } = props;
+
+  const [items, setItems] = useState(products[0]);
+  const [category, setCategory] = useState("all");
+  const [min, setMin] = useState("");
+  const [max, setMax] = useState("");
+
+  useEffect(() => {
+    let filterProducts = products[0];
+    if (category !== "all") {
+      filterProducts = filterProducts.filter(
+        (product) => product.category === category
+      );
+    }
+    if (min !== "") {
+      filterProducts = filterProducts.filter((product) => product.price > min);
+    }
+    if (max !== "") {
+      filterProducts = filterProducts.filter((product) => product.price < max);
+    }
+    setItems(filterProducts);
+  }, [category, min, max]);
+
   return (
-    <div className="px-20">
-      <FilterView />
-      <div className="flex">
-        <img
-          className="h-80 w-80 object-contain bg-white border-dark-green rounded-xl border p-2"
-          src="https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
-          alt="product_Img"
-        ></img>
+    <div className="container mx-auto px-4">
+      <div className="flex my-8">
+        {" "}
+        <Link to={"/"}>
+          {" "}
+          <p className="hover:underline">_Home</p>
+        </Link>
+        <Link to={"/all_products/"}>
+          {" "}
+          <p className="hover:underline">_All Products</p>
+        </Link>
+      </div>
+      <div className="grid grid-cols-1 ">
         <div>
-          <h1>Title</h1>
-          <p>x x x x x (789)</p>
-          <p>Mens Clothing</p>
-          <p>
-            95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach,
-            Lightweight fabric with great stretch for comfort, Ribbed on sleeves
-            and neckline / Double stitching on bottom hem
-          </p>
-        </div>
-        <div>
-          <h1>$78.99</h1>
-          <button className="bg-crimson-red text-white-smoke my-3 px-4 py-3 text-sm md:text-base">
-            Buy Now
-          </button>
+          <SortView
+            items={items}
+            products={products}
+            setCategory={setCategory}
+            setMin={setMin}
+            setMax={setMax}
+          />
+          <hr className="w-full mb-16 md:mb-28"></hr>
+          {items.length !== 0 ? (
+            items.map((product) => (
+              <Products key={product.id} product={product} />
+            ))
+          ) : (
+            <div className="w-full h-96 text-center">
+              <p>No Products Found.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -12,10 +12,7 @@ const Reviews = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col">
-          <label
-            for="about"
-            className="pb-2 font-bold text-gray-800 dark:text-gray-100 "
-          >
+          <label className="pb-2 font-bold text-gray-800 dark:text-gray-100 ">
             Write Your Review
           </label>
           <textarea
@@ -33,7 +30,7 @@ const Reviews = () => {
           <button
             type="submit"
             value="Submit"
-            className="bg-crimson-red text-white-smoke my-5 px-4 py-3 text-sm sm:text-lg "
+            className="bg-crimson-red text-white-smoke my-5 px-4 py-3 text-sm "
           >
             Submit
           </button>
