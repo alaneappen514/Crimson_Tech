@@ -11,52 +11,52 @@ const Footer = () => {
             <h1 className="text-lg text-dark-green font-extrabold">
               My Account
             </h1>
-            <a href="#" className="block text-sm hover:text-slate-400">
+            <p className="block text-sm hover:text-slate-400 cursor-pointer">
               Check Order Status
-            </a>
-            <a href="#" className="block text-sm hover:text-slate-400">
+            </p>
+            <p className="block text-sm hover:text-slate-400  cursor-pointer">
               Returns and Exchagnes
-            </a>
-            <a href="#" className="block text-sm hover:text-slate-400">
+            </p>
+            <p className="block text-sm hover:text-slate-400  cursor-pointer">
               Shipping, Delivery, Pickup
-            </a>
-            <a href="#" className="block text-sm hover:text-slate-400">
+            </p>
+            <p className="block text-sm hover:text-slate-400  cursor-pointer">
               Rewards Program
-            </a>
+            </p>
           </div>
           <div className="max-w-xs m-4">
             <h1 className="text-lg text-dark-green font-extrabold">
               Support Services
             </h1>
-            <a href="#" className="block hover:text-slate-400 text-sm">
+            <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               View Support Center
-            </a>
-            <a href="#" className="block hover:text-slate-400 text-sm">
+            </p>
+            <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               Contact Us
-            </a>
-            <a href="#" className="block hover:text-slate-400 text-sm">
+            </p>
+            <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               Protection and Support
-            </a>
-            <a href="#" className="block hover:text-slate-400 text-sm">
+            </p>
+            <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               Recycling Program
-            </a>
+            </p>
           </div>
           <div className="max-w-xs m-4">
             <h1 className="text-lg text-dark-green font-extrabold">
               About Crimson Tech
             </h1>
-            <a href="#" className="block hover:text-slate-400 text-sm">
+            <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               Our Story
-            </a>
-            <a href="#" className="block hover:text-slate-400 text-sm">
+            </p>
+            <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               Careers
-            </a>
-            <a href="#" className="block hover:text-slate-400 text-sm">
+            </p>
+            <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               Newsroom
-            </a>
-            <a href="#" className="block hover:text-slate-400 text-sm">
+            </p>
+            <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               Corporate Responsibility
-            </a>
+            </p>
           </div>
         </div>
         <div className="text-center bg-white-smoke rounded-lg p-6 ">
@@ -79,18 +79,18 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-white   mt-16 flex flex-wrap justify-center">
-        <a href="#" className=" m-5 hover:text-slate-400 text-sm">
+        <p className=" m-5 hover:text-slate-400 text-sm  cursor-pointer">
           Accessibility
-        </a>
-        <a href="#" className=" m-5 hover:text-slate-400 text-sm">
+        </p>
+        <p className=" m-5 hover:text-slate-400 text-sm  cursor-pointer">
           Terms and Conditions
-        </a>
-        <a href="#" className=" m-5 hover:text-slate-400 text-sm">
+        </p>
+        <p className=" m-5 hover:text-slate-400 text-sm  cursor-pointer">
           Internet-based ads
-        </a>
-        <a href="#" className=" m-5 hover:text-slate-400 text-sm">
+        </p>
+        <p className=" m-5 hover:text-slate-400 text-sm  cursor-pointer">
           Privacy Policy
-        </a>
+        </p>
       </div>
       <div className="flex justify-center space-x-6 mt-6 ">
         <i className="fab fa-facebook-square text-white-smoke fa-2x hover:text-slate-400 "></i>

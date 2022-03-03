@@ -9,7 +9,7 @@ const AllProducts = () => {
 
   useEffect(() => {
     dispatch(fetchProducts());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
