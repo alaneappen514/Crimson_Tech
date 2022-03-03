@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import FilterView from "./FilterView";
 import SortView from "./SortView";
 import Products from "../AllProducts/Products";
 import { Link } from "react-router-dom";
