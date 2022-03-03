@@ -18,7 +18,7 @@ const Product = () => {
     return () => {
       dispatch(removeSelectedProduct());
     };
-  }, [productId]);
+  }, [productId, dispatch]);
 
   return (
     <div>

@@ -25,7 +25,7 @@ const AllProductsView = (props) => {
       filterProducts = filterProducts.filter((product) => product.price < max);
     }
     setItems(filterProducts);
-  }, [category, min, max]);
+  }, [category, min, max, products]);
 
   return (
     <div className="container mx-auto px-4">

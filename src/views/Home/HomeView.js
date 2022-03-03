@@ -47,9 +47,7 @@ const HomeView = () => {
               Best Selling Products
             </h1>
             <Link to={"/all_products"}>
-              <a className="text-gray-600 text-sm hover:underline" href="#">
-                View All
-              </a>
+              <p className="text-gray-600 text-sm hover:underline">View All</p>
             </Link>
           </div>
           <div>
