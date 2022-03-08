@@ -77,7 +77,10 @@ const Navbar = () => {
           </form>
           <div className="lg:flex lg:mt-0 mt-10 space-y-5 lg:space-y-0">
             <Link to="/all_products">
-              <p className="block text-sm lg:hidden p-3 lg:p-0  text-white-smoke  hover:bg-dark-green">
+              <p
+                onClick={menuBar}
+                className="block text-sm lg:hidden p-3 lg:p-0  text-white-smoke  hover:bg-dark-green"
+              >
                 Shop
               </p>
             </Link>
