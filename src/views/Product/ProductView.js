@@ -3,14 +3,17 @@ import { useSelector } from "react-redux";
 import Collapsible from "./Collapsible";
 import Reviews from "./Reviews";
 import { useNavigate } from "react-router-dom";
+import { addToCart } from "../../redux/actions/cartActions";
+import { useDispatch } from "react-redux";
 const ProductView = () => {
   const history = useNavigate();
+  const dispatch = useDispatch();
   const product = useSelector((state) => state.product);
 
   return (
     <div className="container mx-auto p-4 my-16">
       <p
-        className="mb-16 hover:underline cursor-pointer"
+        className="inline-block mb-16 hover:underline cursor-pointer"
         onClick={() => history(-1)}
       >
         _Back
@@ -51,7 +54,10 @@ const ProductView = () => {
                 <h1 className="text-lg md:text-2xl font-extrabold">
                   ${product.price}
                 </h1>
-                <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 ">
+                <button
+                  onClick={() => dispatch(addToCart(product))}
+                  className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 "
+                >
                   Add to Cart
                 </button>
               </div>
