@@ -59,7 +59,9 @@ const Navbar = () => {
         <div className="lg:hidden ">
           <Link to="/cart">
             <i className="text-white-smoke hover:text-slate-400 inline-flex p-3 rounded  fas fa-shopping-cart text-2xl sm:text-3xl mr-5">
-              <span className="ml-3">({cartCount})</span>
+              <span className="ml-3">
+                {cart.length ? <>({cartCount})</> : <></>}
+              </span>
             </i>
           </Link>
           <button onClick={menuBar}>
@@ -109,7 +111,7 @@ const Navbar = () => {
             </p>
             <Link to="/cart">
               <p className="hidden lg:block text-sm p-3 lg:p-0 text-white-smoke lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green cursor-pointer">
-                Cart({cartCount})
+                {cart.length ? <>Cart({cartCount})</> : <>Cart</>}
               </p>
             </Link>
           </div>

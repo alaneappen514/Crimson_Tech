@@ -24,7 +24,7 @@ const PromotionFeed = () => {
                   <p
                     className={` ${
                       product.id % 3 === 0 ? `text-black` : `text-white-smoke`
-                    } my-5 text-clip text-sm sm:text-base overflow-hidden line-clamp-3 sm:line-clamp-2 md:line-clamp-2 lg:line-clamp-2`}
+                    } my-5 text-clip text-sm sm:text-base overflow-hidden line-clamp-3 sm:line-clamp-2`}
                   >
                     {product.description}
                   </p>
