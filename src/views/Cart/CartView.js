@@ -1,6 +1,8 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import CartItem from "./CartItem";
 
 const CartView = () => {
   const cart = useSelector((state) => state.cart.cart);
@@ -17,48 +19,31 @@ const CartView = () => {
   }, [totalPrice, taxPrice, setTaxPrice, cart, setTotalPrice]);
 
   return (
-    <div className="container mx-auto px-4 my-8">
+    <div className="container mx-auto px-4 my-16">
       <div>
         <h1 className="sm:text-xl md:text-2xl font-bold">Shopping Cart</h1>
       </div>
       <div className="grid gap-6 grid-cols-10">
         <div className="col-span-6">
-          {cart.map((product) => {
-            return (
-              <div
-                key={product.id}
-                className="flex justify-evenly bg-white rounded-xl p-5 mt-5"
-              >
-                <img
-                  src={product.image}
-                  alt="cart_item"
-                  className="w-56 h-56 object-contain"
-                ></img>
-                <div className="flex flex-col justify-between w-96">
-                  <div>
-                    <p className="text-lg font-bold">{product.title}</p>
-                    <div className="flex items-center">
-                      <p>Quantity</p>
-                      <input
-                        type="number"
-                        name="quantity"
-                        min="1"
-                        value={product.qty}
-                        className="w-10 p-1 bg-white-smoke border border-black ml-2 rounded"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex justify-between">
-                    <p className="text-xl font-bold">${product.price}</p>
-                    <p className="hover:underline cursor-pointer">Delete</p>
-                  </div>
-                </div>
+          {cart.length ? (
+            cart.map((product) => (
+              <div key={product.id}>
+                <CartItem item={product} />
               </div>
-            );
-          })}
+            ))
+          ) : (
+            <div className="h-96 flex flex-col justify-center items-center">
+              <p>Cart is empty...</p>
+              <Link to="/all_products/">
+                <button className="border-4 border-crimson-red hover:bg-crimson-red hover:text-white-smoke my-3 px-4 py-3 text-sm ">
+                  Shop Now
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
         <div className="col-span-4">
-          <div className=" sticky top-0 flex flex-col justify-between h-60 bg-white mt-5 rounded-xl drop-shadow-lg p-5">
+          <div className=" sticky top-4 flex flex-col justify-between h-60 bg-white mt-5 rounded-xl drop-shadow-lg p-5">
             <p className="text-center sm:text-xl md:text-2xl font-bold">
               Order Summary
             </p>

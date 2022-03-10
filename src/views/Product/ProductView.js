@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import Collapsible from "./Collapsible";
 import Reviews from "./Reviews";
@@ -9,6 +10,15 @@ const ProductView = () => {
   const history = useNavigate();
   const dispatch = useDispatch();
   const product = useSelector((state) => state.product);
+  const [loader, setLoader] = useState(false);
+
+  const itemToCart = () => {
+    setLoader(true);
+    setTimeout(() => {
+      setLoader(false);
+      dispatch(addToCart(product));
+    }, 500);
+  };
 
   return (
     <div className="container mx-auto p-4 my-16">
@@ -55,10 +65,14 @@ const ProductView = () => {
                   ${product.price}
                 </h1>
                 <button
-                  onClick={() => dispatch(addToCart(product))}
-                  className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 "
+                  onClick={() => itemToCart()}
+                  className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 flex justify-center"
                 >
-                  Add to Cart
+                  {loader ? (
+                    <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 "></div>
+                  ) : (
+                    <p>Add to Cart</p>
+                  )}
                 </button>
               </div>
             </div>

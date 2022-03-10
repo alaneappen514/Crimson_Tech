@@ -39,9 +39,9 @@ const HomeView = () => {
         </div>
       </div>
 
-      <div className="container mx-auto px-4">
-        <div className="Product_Feed">
-          <div className="flex items-center space-x-10 mt-12">
+      <div className="container mx-auto px-4 my-16">
+        <div className="Product_Feed ">
+          <div className="flex items-center space-x-10">
             <h1 className=" sm:text-xl md:text-2xl font-bold">
               {" "}
               Best Selling Products
@@ -54,7 +54,7 @@ const HomeView = () => {
             <ProductFeed />
           </div>
         </div>
-        <div className="Promotions my-10">
+        <div className="Promotions">
           <PromotionFeed />
         </div>
       </div>
