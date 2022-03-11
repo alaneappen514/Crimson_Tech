@@ -20,8 +20,8 @@ const Reviews = () => {
             name="review"
             required
             className="bg-transparent border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm sm:text-base focus:outline-none focus:border-crimson-red resize-none placeholder-gray-500 text-gray-600"
-            placeholder="Let the world know who you are"
             rows="5"
+            placeholder="Review"
             value={review}
             onChange={(e) => setReview(e.target.value)}
           ></textarea>

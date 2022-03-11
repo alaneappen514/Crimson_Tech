@@ -1,10 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../Images/Logo.png";
 import { Link } from "react-router-dom";
 import "../styles/navbar.css";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
+  const cart = useSelector((state) => state.cart.cart);
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const [cartCount, setCartCount] = useState(0);
+
+  useEffect(() => {
+    let count = 0;
+    cart.forEach((item) => {
+      count += item.qty;
+    });
+
+    setCartCount(count);
+  }, [cart, cartCount]);
 
   const menuBar = () => {
     setNavbarOpen((prev) => !prev);
@@ -45,9 +57,13 @@ const Navbar = () => {
           </form>
         </div>
         <div className="lg:hidden ">
-          <button>
-            <i className="text-white-smoke hover:text-slate-400 inline-flex p-3 rounded  fas fa-shopping-cart text-2xl sm:text-3xl mr-5"></i>
-          </button>
+          <Link to="/cart">
+            <i className="text-white-smoke hover:text-slate-400 inline-flex p-3 rounded  fas fa-shopping-cart text-2xl sm:text-3xl mr-5">
+              <span className="ml-3">
+                {cart.length ? <>({cartCount})</> : <></>}
+              </span>
+            </i>
+          </Link>
           <button onClick={menuBar}>
             {navbarOpen ? (
               <i className="text-white-smoke hover:text-white-smoke hover:bg-gray-800 inline-flex p-3 rounded far fas fa-times text-2xl sm:text-3xl"></i>
@@ -93,9 +109,11 @@ const Navbar = () => {
             <p className=" block text-sm  p-3 lg:p-0  text-white-smoke lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green lg:mr-12 cursor-pointer">
               Account
             </p>
-            <p className="block text-sm p-3 lg:p-0 text-white-smoke lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green cursor-pointer">
-              Cart
-            </p>
+            <Link to="/cart">
+              <p className="hidden lg:block text-sm p-3 lg:p-0 text-white-smoke lg:hover:text-slate-400 lg:hover:bg-inherit hover:bg-dark-green cursor-pointer">
+                {cart.length ? <>Cart({cartCount})</> : <>Cart</>}
+              </p>
+            </Link>
           </div>
         </div>
       </nav>
