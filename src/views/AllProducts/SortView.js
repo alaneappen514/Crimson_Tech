@@ -55,6 +55,7 @@ const SortView = (props) => {
               name="minPrice"
               placeholder="Min Price"
               onChange={(e) => handleChange(e, "min")}
+              min={0}
               className="w-2/5 md:w-auto"
             ></input>
             <p className="mx-5">to</p>
@@ -63,6 +64,7 @@ const SortView = (props) => {
               name="maxPrice"
               placeholder="Max Price"
               className="w-2/5 md:w-auto"
+              min={0}
               onChange={(e) => handleChange(e, "max")}
             ></input>
           </div>

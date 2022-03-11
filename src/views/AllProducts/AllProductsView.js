@@ -31,13 +31,14 @@ const AllProductsView = (props) => {
     <div className="container mx-auto px-4">
       <div className="flex my-8">
         {" "}
-        <Link to={"/"}>
+        <Link className="flex items-center" to={"/"}>
           {" "}
-          <p className="hover:underline">_Home</p>
+          <p className="hover:underline">Home</p>
         </Link>
-        <Link to={"/all_products/"}>
+        <Link className="flex items-center mx-3" to={"/all_products/"}>
           {" "}
-          <p className="hover:underline">_All Products</p>
+          <i className="fa fa-chevron-left mr-2"></i>
+          <p className="hover:underline">All Products</p>
         </Link>
       </div>
       <div className="grid grid-cols-1 ">

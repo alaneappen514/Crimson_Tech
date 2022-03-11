@@ -22,11 +22,12 @@ const ProductView = () => {
 
   return (
     <div className="container mx-auto p-4 my-16">
+      <i className="fa fa-chevron-left"></i>
       <p
-        className="inline-block mb-16 hover:underline cursor-pointer"
+        className="inline-block ml-3 mb-16 hover:underline cursor-pointer"
         onClick={() => history(-1)}
       >
-        _Back
+        Back
       </p>
       {Object.keys(product).length !== 0 ? (
         <>

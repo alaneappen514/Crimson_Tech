@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { adjustQty, removeFromCart } from "../../redux/actions/cartActions";
+import { Link } from "react-router-dom";
 
 const CartItem = (props) => {
   const { item } = props;
@@ -32,9 +33,11 @@ const CartItem = (props) => {
       ></img>
       <div className="flex flex-col justify-between w-96">
         <div>
-          <p className="sm:text-lg font-bold text-clip line-clamp-2">
-            {item.title}
-          </p>
+          <Link to={`/product/${item.id}`}>
+            <p className="sm:text-lg font-bold text-clip line-clamp-2 hover:underline">
+              {item.title}
+            </p>
+          </Link>
           <div className="flex items-center">
             <p className="text-sm sm:text-base">Quantity</p>
             <input
@@ -53,7 +56,7 @@ const CartItem = (props) => {
             {loader ? (
               <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 "></div>
             ) : (
-              <p className="hover:underline cursor-pointer text-sm sm:text-base">
+              <p className="hover:underline cursor-pointer text-sm sm:text-base text-crimson-red">
                 Delete
               </p>
             )}

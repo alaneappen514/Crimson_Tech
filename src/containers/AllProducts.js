@@ -16,7 +16,9 @@ const AllProducts = () => {
       {Object.keys(products).length !== 0 ? (
         <AllProductsView products={products} />
       ) : (
-        <></>
+        <div className="h-96 flex justify-center items-center">
+          <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-14 w-14 "></div>
+        </div>
       )}
     </div>
   );
