@@ -29,7 +29,7 @@ const CartItem = (props) => {
       <img
         src={item.image}
         alt="cart_item"
-        className="w-20 h-20 md:w-56 md:h-56 object-contain mr-5 sm:mr-0"
+        className="w-20 h-20 md:w-56 md:h-56 object-contain mr-5 lg:mr-2"
       ></img>
       <div className="flex flex-col justify-between w-96">
         <div>
@@ -46,7 +46,7 @@ const CartItem = (props) => {
               min="1"
               onChange={handleChange}
               value={inputValue}
-              className="w-16 sm:w-10 p-1 bg-white-smoke border border-black ml-2 rounded"
+              className="w-14 p-1 bg-white-smoke border border-black ml-2 rounded"
             />
           </div>
         </div>
