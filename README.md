@@ -1,4 +1,4 @@
-# E-Commerce Website
+# E-Commerce Website (REACT,REDUX,REACT HOOKS, TAILWIND CSS)
 
 WEBSITE: https://crimsontech.netlify.app/
 
