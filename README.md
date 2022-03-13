@@ -1,4 +1,6 @@
-# E-Commerce Website (REACT,REDUX,REACT HOOKS, TAILWIND CSS)
+# E-Commerce Website 
+
+Crimson Tech is an e-commerce website orginally designed to imporve product information and help coustomers make good buying descions. After finishing the UX study I decided to build it using ReactJS, Redux, React Hooks, and Tailwind CSS. 
 
 WEBSITE: https://crimsontech.netlify.app/
 
