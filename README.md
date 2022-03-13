@@ -1,6 +1,6 @@
 # E-Commerce Website 
 
-Crimson Tech is an e-commerce website orginally designed to imporve product information and help coustomers make good buying descions. After finishing the UX study I decided to build it using ReactJS, Redux, React Hooks, and Tailwind CSS. 
+Crimson Tech is an e-commerce website designed to improve product information and help customers make good buying decisions. After finishing the UX Study I decided to build it using ReactJS, Redux, React Hooks, and Tailwind CSS. 
 
 WEBSITE: https://crimsontech.netlify.app/
 
