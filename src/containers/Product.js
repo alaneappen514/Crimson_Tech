@@ -21,9 +21,9 @@ const Product = () => {
   }, [productId, dispatch]);
 
   return (
-    <div>
+    <main>
       <ProductView />
-    </div>
+    </main>
   );
 };
 

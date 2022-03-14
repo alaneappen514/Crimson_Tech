@@ -12,7 +12,7 @@ const AllProducts = () => {
   }, [dispatch]);
 
   return (
-    <div>
+    <main>
       {Object.keys(products).length !== 0 ? (
         <AllProductsView products={products} />
       ) : (
@@ -20,7 +20,7 @@ const AllProducts = () => {
           <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-14 w-14 "></div>
         </div>
       )}
-    </div>
+    </main>
   );
 };
 

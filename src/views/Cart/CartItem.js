@@ -28,7 +28,7 @@ const CartItem = (props) => {
     <div className="flex justify-evenly bg-white rounded-xl p-5 mt-5">
       <img
         src={item.image}
-        alt="cart_item"
+        alt="Cart Item"
         className="w-20 h-20 md:w-56 md:h-56 object-contain mr-5 lg:mr-2"
       ></img>
       <div className="flex flex-col justify-between w-96">

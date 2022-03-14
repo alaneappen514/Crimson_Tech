@@ -11,11 +11,9 @@ const Home = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <section>
-        <HomeView />
-      </section>
-    </div>
+    <main>
+      <HomeView />
+    </main>
   );
 };
 

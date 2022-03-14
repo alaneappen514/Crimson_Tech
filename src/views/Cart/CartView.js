@@ -20,13 +20,13 @@ const CartView = () => {
 
   return (
     <div className="container mx-auto px-4 my-16">
-      <div>
+      <header>
         <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
           Shopping Cart
         </h1>
-      </div>
+      </header>
       <div className="grid gap-6 grid-cols-1 lg:grid-cols-10">
-        <div className="lg:col-span-6">
+        <section className="lg:col-span-6">
           {cart.length ? (
             cart.map((product) => (
               <div key={product.id}>
@@ -38,8 +38,8 @@ const CartView = () => {
               <p>Cart is empty...</p>
             </div>
           )}
-        </div>
-        <div className="lg:col-span-4">
+        </section>
+        <section className="lg:col-span-4">
           <div className=" sticky top-4 flex flex-col justify-between h-60 bg-white mt-5 rounded-xl drop-shadow-lg p-5">
             <p className="text-center text-lg sm:text-xl md:text-2xl font-bold">
               Order Summary
@@ -75,7 +75,7 @@ const CartView = () => {
               </Link>
             )}
           </div>
-        </div>
+        </section>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ const Product = (props) => {
         <img
           className="h-80 w-80 object-contain bg-white border-dark-green rounded-xl border p-2"
           src={product.image}
-          alt="product_Img"
+          alt="Product Img"
         ></img>
         <div className="mt-5 md:mt-0">
           <div className="w-80">

@@ -3,9 +3,9 @@ import CartView from "../views/Cart/CartView";
 
 const Cart = () => {
   return (
-    <div>
+    <main>
       <CartView />
-    </div>
+    </main>
   );
 };
 

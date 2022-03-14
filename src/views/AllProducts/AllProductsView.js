@@ -29,39 +29,43 @@ const AllProductsView = (props) => {
 
   return (
     <div className="container mx-auto px-4">
-      <div className="flex my-8">
-        {" "}
-        <Link className="flex items-center" to={"/"}>
+      <section>
+        <div className="flex my-8">
           {" "}
-          <p className="hover:underline">Home</p>
-        </Link>
-        <Link className="flex items-center mx-3" to={"/all_products/"}>
-          {" "}
-          <i className="fa fa-chevron-left mr-2"></i>
-          <p className="hover:underline">All Products</p>
-        </Link>
-      </div>
-      <div className="grid grid-cols-1 ">
-        <div>
-          <SortView
-            items={items}
-            products={products}
-            setCategory={setCategory}
-            setMin={setMin}
-            setMax={setMax}
-          />
-          <hr className="w-full mb-16 md:mb-28"></hr>
-          {items.length !== 0 ? (
-            items.map((product) => (
-              <Products key={product.id} product={product} />
-            ))
-          ) : (
-            <div className="w-full h-96 text-center">
-              <p>No Products Found.</p>
-            </div>
-          )}
+          <Link className="flex items-center" to={"/"}>
+            {" "}
+            <p className="hover:underline">Home</p>
+          </Link>
+          <Link className="flex items-center mx-3" to={"/all_products/"}>
+            {" "}
+            <i className="fa fa-chevron-left mr-2"></i>
+            <p className="hover:underline">All Products</p>
+          </Link>
         </div>
-      </div>
+      </section>
+      <section>
+        <div className="grid grid-cols-1 ">
+          <div>
+            <SortView
+              items={items}
+              products={products}
+              setCategory={setCategory}
+              setMin={setMin}
+              setMax={setMax}
+            />
+            <hr className="w-full mb-16 md:mb-28"></hr>
+            {items.length !== 0 ? (
+              items.map((product) => (
+                <Products key={product.id} product={product} />
+              ))
+            ) : (
+              <div className="w-full h-96 text-center">
+                <p>No Products Found.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
