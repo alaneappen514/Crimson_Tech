@@ -30,7 +30,7 @@ const Navbar = () => {
             <img
               className="w-14 h-14 rounded-full "
               src={logo}
-              alt="logo"
+              alt="Brand-Logo"
             ></img>
           </Link>
           <Link to="/all_products">
@@ -42,15 +42,16 @@ const Navbar = () => {
             Deals
           </p>
           <form className="navlinks">
-            <label>
+            <span>
               <input
                 placeholder=" Search for anything..."
+                aria-label="Enter Search Term"
                 className="w-80 p-1  rounded-l-lg placeholder:italic focus:outline-none"
                 type="search"
                 id="inputSearch"
                 name="inputSearch"
               ></input>
-            </label>
+            </span>
             <button className="bg-dark-green  text-white-smoke rounded-r-lg px-4 py-1">
               <i className="fas fa-search"></i>
             </button>
@@ -78,16 +79,20 @@ const Navbar = () => {
           } lg:flex lg:items-center lg:w-auto`}
         >
           <form className="lg:hidden flex items-center justify-between mt-16 ">
-            <label className="w-full">
+            <div className="w-full">
               <input
                 placeholder=" Search for anything..."
+                aria-label="Enter Search Term"
                 className="w-full p-2  rounded-l-lg placeholder:italic focus:outline-none"
                 type="search"
                 id="inputSearch"
                 name="inputSearch"
               ></input>
-            </label>
-            <button className="bg-dark-green  text-white-smoke rounded-r-lg px-4 py-2">
+            </div>
+            <button
+              className="bg-dark-green  text-white-smoke rounded-r-lg px-4 py-2"
+              aria-label="Search Button"
+            >
               <i className="fas fa-search"></i>
             </button>
           </form>

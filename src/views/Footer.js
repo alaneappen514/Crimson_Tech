@@ -5,12 +5,14 @@ const Footer = () => {
   return (
     <div className="bg-black mx-auto  p-10 ">
       <div className="flex flex-col xl:flex-row xl:space-y-0 space-y-16 items-center justify-around">
-        <img className="w-56 h-56 rounded-full" src={logo} alt="logo"></img>
+        <img
+          className="w-56 h-56 rounded-full"
+          src={logo}
+          alt="Brand-Logo"
+        ></img>
         <div className="flex flex-wrap justify-center sm:justify-evenly text-white-smoke ">
           <div className="max-w-xs m-4">
-            <h1 className="text-lg text-dark-green font-extrabold">
-              My Account
-            </h1>
+            <p className="text-lg text-dark-green font-extrabold">My Account</p>
             <p className="block text-sm hover:text-slate-400 cursor-pointer">
               Check Order Status
             </p>
@@ -25,9 +27,9 @@ const Footer = () => {
             </p>
           </div>
           <div className="max-w-xs m-4">
-            <h1 className="text-lg text-dark-green font-extrabold">
+            <p className="text-lg text-dark-green font-extrabold">
               Support Services
-            </h1>
+            </p>
             <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               View Support Center
             </p>
@@ -42,9 +44,9 @@ const Footer = () => {
             </p>
           </div>
           <div className="max-w-xs m-4">
-            <h1 className="text-lg text-dark-green font-extrabold">
+            <p className="text-lg text-dark-green font-extrabold">
               About Crimson Tech
-            </h1>
+            </p>
             <p className="block hover:text-slate-400 text-sm  cursor-pointer">
               Our Story
             </p>
@@ -60,12 +62,13 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center bg-white-smoke rounded-lg p-6 ">
-          <h1 className="font-extrabold text-lg ">
-            Get the Hottest Deals and More!!!
-          </h1>
-          <form className="mt-5">
+          <form className="flex flex-col">
+            <label htmlFor="Email" className="font-extrabold text-lg mb-5">
+              Sign Up to get the hottest deals and more!!!
+            </label>
             <input
               placeholder="Email"
+              aria-label="Enter Email Address"
               type="search"
               id="emailDeals"
               name="emailDeals"
