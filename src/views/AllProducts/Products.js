@@ -37,12 +37,12 @@ const Product = (props) => {
               {product.description}
             </p>
           </div>
-          <div>
+          <div className="text-center md:text-left my-3 ">
             <h1 className="text-lg lg:text:xl xl:text-2xl font-extrabold">
               ${product.price}
             </h1>
             <Link to={`/product/${product.id}`}>
-              <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke my-3 px-10 xl:px-16 py-2 text-sm ">
+              <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke  px-10 xl:px-16 py-2 text-sm ">
                 Buy Now
               </button>
             </Link>

@@ -19,7 +19,7 @@ const CartView = () => {
   }, [totalPrice, taxPrice, setTaxPrice, cart, setTotalPrice]);
 
   return (
-    <div className="container mx-auto px-4 my-16">
+    <div className="container mx-auto px-4 my-8">
       <header>
         <h1 className="text-lg sm:text-xl md:text-2xl font-bold">
           Shopping Cart

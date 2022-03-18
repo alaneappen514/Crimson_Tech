@@ -61,8 +61,8 @@ const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="text-center bg-white-smoke rounded-lg p-6 ">
-          <form className="flex flex-col">
+        <div className=" bg-white-smoke rounded-lg p-6 ">
+          <form className="flex flex-col items-center">
             <label htmlFor="Email" className="font-extrabold text-lg mb-5">
               Sign Up to get the hottest deals and more!!!
             </label>
@@ -74,7 +74,7 @@ const Footer = () => {
               name="emailDeals"
               className="w-full p-2 roundedl-lg placeholder:italic border-gray-600 border-2 focus:outline-none"
             ></input>
-            <button className="px-4 py-3 my-5 text-sm  bg-dark-green text-white-smoke hover:bg-slate-400 hover:text-black">
+            <button className="w-1/2 px-4 py-3 my-5 text-sm  bg-crimson-red text-white-smoke hover:bg-crimson-light-red">
               {" "}
               Sign Up
             </button>

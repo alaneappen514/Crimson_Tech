@@ -44,8 +44,8 @@ const HomeView = () => {
         <div className="container mx-auto px-4 my-16">
           <section>
             <header>
-              <div className="flex items-center space-x-10">
-                <h1 className=" sm:text-xl md:text-2xl font-bold">
+              <div className="flex items-center space-x-5">
+                <h1 className=" text-xl md:text-2xl font-bold">
                   {" "}
                   Best Selling Products
                 </h1>

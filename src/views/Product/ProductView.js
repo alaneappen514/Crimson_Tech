@@ -21,7 +21,7 @@ const ProductView = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 my-16">
+    <div className="container mx-auto p-4 my-8">
       <i className="fa fa-chevron-left"></i>
       <p
         className="inline-block ml-3 mb-16 hover:underline cursor-pointer"
@@ -32,7 +32,7 @@ const ProductView = () => {
       {Object.keys(product).length !== 0 ? (
         <>
           <section>
-            <div className="flex flex-wrap justify-evenly ">
+            <div className="flex flex-wrap justify-evenly items-center">
               <figure>
                 <img
                   className="w-80 h-80 lg:w-96 lg:h-96 object-contain bg-white border-dark-green rounded-xl border p-2"
