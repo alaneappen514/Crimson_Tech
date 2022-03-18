@@ -19,7 +19,7 @@ const ProductFeed = () => {
                 <img
                   className=" h-52 w-52 object-contain"
                   src={product.image}
-                  alt="product"
+                  alt="Best Selling Products"
                 ></img>
                 <h2 className="lg:text-xl text-lg font-bold mt-4 line-clamp-1">
                   {product.title}

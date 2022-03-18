@@ -33,8 +33,9 @@ const SortView = (props) => {
 
         <div className="flex flex-wrap">
           <div>
-            <label>Category:</label>
+            <label htmlFor="category">Category:</label>
             <select
+              name="category"
               className="mx-5"
               onChange={(e) => handleChange(e, "category")}
             >
@@ -54,6 +55,7 @@ const SortView = (props) => {
               type="number"
               name="minPrice"
               placeholder="Min Price"
+              aria-label="Enter minimum price"
               onChange={(e) => handleChange(e, "min")}
               min={0}
               className="w-2/5 md:w-auto"
@@ -63,6 +65,7 @@ const SortView = (props) => {
               type="number"
               name="maxPrice"
               placeholder="Max Price"
+              aria-label="Enter maximum price"
               className="w-2/5 md:w-auto"
               min={0}
               onChange={(e) => handleChange(e, "max")}

@@ -9,7 +9,7 @@ const Product = (props) => {
         <img
           className="h-80 w-80 object-contain bg-white border-dark-green rounded-xl border p-2"
           src={product.image}
-          alt="product_Img"
+          alt="Product Img"
         ></img>
         <div className="mt-5 md:mt-0">
           <div className="w-80">
@@ -37,12 +37,12 @@ const Product = (props) => {
               {product.description}
             </p>
           </div>
-          <div>
+          <div className="text-center md:text-left my-3 ">
             <h1 className="text-lg lg:text:xl xl:text-2xl font-extrabold">
               ${product.price}
             </h1>
             <Link to={`/product/${product.id}`}>
-              <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke my-3 px-10 xl:px-16 py-2 text-sm ">
+              <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke  px-10 xl:px-16 py-2 text-sm ">
                 Buy Now
               </button>
             </Link>

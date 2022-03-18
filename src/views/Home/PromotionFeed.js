@@ -43,7 +43,7 @@ const PromotionFeed = () => {
                 <img
                   className=" h-72 w-72 lg:h-96 lg:w-96 mt-10 object-contain"
                   src={product.image}
-                  alt="Promotion_Image"
+                  alt="Promotion Img"
                 ></img>
               </div>
             );

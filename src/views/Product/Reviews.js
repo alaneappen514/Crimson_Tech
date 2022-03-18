@@ -12,7 +12,10 @@ const Reviews = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-col">
-          <label className="pb-2 font-bold text-gray-800 dark:text-gray-100 ">
+          <label
+            htmlFor="review"
+            className="pb-2 font-bold text-gray-800 dark:text-gray-100 "
+          >
             Write Your Review
           </label>
           <textarea
@@ -22,6 +25,7 @@ const Reviews = () => {
             className="bg-transparent border border-gray-300 dark:border-gray-700 pl-3 py-3 shadow-sm rounded text-sm sm:text-base focus:outline-none focus:border-crimson-red resize-none placeholder-gray-500 text-gray-600"
             rows="5"
             placeholder="Review"
+            aria-label="Write Review"
             value={review}
             onChange={(e) => setReview(e.target.value)}
           ></textarea>
