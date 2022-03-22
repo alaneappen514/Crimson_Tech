@@ -1,9 +1,15 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const PromotionFeed = () => {
   const products = useSelector((state) => state.allProducts.products);
+  const [rotate, setRotate] = useState();
+
+  useEffect(() => {
+    window.innerWidth < 1024 ? setRotate(2) : setRotate(3);
+  }, [setRotate]);
 
   return (
     <div className="grid lg:grid-cols-2 mt-16">
@@ -12,18 +18,26 @@ const PromotionFeed = () => {
           {products[0]?.slice(8, 12).map((product) => {
             return (
               <div
-                className={`flex flex-col items-center m-2 p-9 sm:p-10 md:p-14 lg:p-16 ${
-                  product.id % 3 === 0 ? `bg-white` : `bg-dark-green`
+                className={`flex flex-col items-center  my-2 sm:m-2 p-9 sm:p-10 md:p-14 lg:p-16 ${
+                  product.id % rotate === 0 ? `bg-white` : `bg-dark-green`
                 } rounded-lg drop-shadow-lg `}
                 key={product.id}
               >
                 <div className="text-center max-w-lg">
-                  <h1 className=" text-lg sm:text-2xl  font-extrabold line-clamp-1">
+                  <h1
+                    className={` ${
+                      product.id % rotate === 0
+                        ? `text-black`
+                        : `text-white-smoke`
+                    } text-lg sm:text-2xl  font-extrabold line-clamp-1`}
+                  >
                     {product.title}
                   </h1>
                   <p
                     className={` ${
-                      product.id % 3 === 0 ? `text-black` : `text-white-smoke`
+                      product.id % rotate === 0
+                        ? `text-black`
+                        : `text-white-smoke`
                     } my-5 text-clip text-sm sm:text-base overflow-hidden line-clamp-3 sm:line-clamp-2`}
                   >
                     {product.description}
@@ -31,7 +45,7 @@ const PromotionFeed = () => {
                   <Link to={`/product/${product.id}`}>
                     <button
                       className={`border-4 ${
-                        product.id % 3 === 0
+                        product.id % rotate === 0
                           ? `border-black hover:bg-black`
                           : `border-white-smoke hover:bg-white-smoke hover:text-slate-800 text-white-smoke`
                       } hover:text-white-smoke px-4 py-3 text-sm `}

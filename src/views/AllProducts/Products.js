@@ -5,7 +5,7 @@ const Product = (props) => {
   const { product } = props;
   return (
     <div>
-      <div className="flex justify-evenly  flex-wrap ">
+      <div className="flex justify-evenly flex-wrap ">
         <img
           className="h-80 w-80 object-contain bg-white border-dark-green rounded-xl border p-2"
           src={product.image}
@@ -51,7 +51,7 @@ const Product = (props) => {
       </div>
       <div className="flex justify-center">
         {" "}
-        <hr className="my-16 md:my-28  w-5/6"></hr>
+        <hr className="my-14 sm:my-16 md:my-28  w-5/6"></hr>
       </div>
     </div>
   );

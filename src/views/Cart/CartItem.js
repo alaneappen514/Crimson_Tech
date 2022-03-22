@@ -25,12 +25,14 @@ const CartItem = (props) => {
   };
 
   return (
-    <div className="flex justify-evenly bg-white rounded-xl p-5 mt-5">
-      <img
-        src={item.image}
-        alt="Cart Item"
-        className="w-20 h-20 md:w-56 md:h-56 object-contain mr-5 lg:mr-2"
-      ></img>
+    <div className="flex justify-evenly items-center md:items-stretch bg-white rounded-xl p-5 mt-5">
+      <div className="min-w-fit">
+        <img
+          src={item.image}
+          alt="Cart Item"
+          className="w-24 h-24 md:w-56 md:h-56 object-contain mr-5"
+        ></img>
+      </div>
       <div className="flex flex-col justify-between w-96">
         <div>
           <Link to={`/product/${item.id}`}>

@@ -53,7 +53,7 @@ const AllProductsView = (props) => {
               setMin={setMin}
               setMax={setMax}
             />
-            <hr className="w-full mb-16 md:mb-28"></hr>
+            <hr className="w-full mb-14 sm:mb-16 md:mb-28"></hr>
             {items.length !== 0 ? (
               items.map((product) => (
                 <Products key={product.id} product={product} />

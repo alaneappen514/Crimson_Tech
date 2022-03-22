@@ -12,7 +12,7 @@ const ProductFeed = () => {
           {products[0]?.slice(0, 4).map((product) => {
             return (
               <div
-                className="flex flex-col items-center m-5 p-5 bg-white rounded-3xl mt-12 drop-shadow-lg"
+                className="flex flex-col items-center m-0 sm:m-5 p-5 bg-white rounded-3xl mt-12 drop-shadow-lg"
                 key={product.id}
               >
                 {" "}
