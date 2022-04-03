@@ -74,7 +74,7 @@ const Footer = () => {
               name="emailDeals"
               className="w-full p-2 roundedl-lg placeholder:italic border-gray-600 border-2 focus:outline-none"
             ></input>
-            <button className="w-1/2 px-4 py-3 my-5 text-sm  bg-crimson-red text-white-smoke hover:bg-crimson-light-red">
+            <button className="w-1/2 px-4 py-3 my-5 text-sm  bg-crimson-red text-white-smoke hover:bg-crimson-light-red outline-violet-900 outline-offset-4 outline-2">
               {" "}
               Sign Up
             </button>

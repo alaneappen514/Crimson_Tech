@@ -25,14 +25,14 @@ const HomeView = () => {
                 <p className="my-7">
                   Get yours today <strong>Free</strong> with activation.
                 </p>
-                <button className="border-4 text-sm border-slate-600 hover:bg-slate-600 hover:text-white-smoke px-4 py-3">
+                <button className="border-4 text-sm border-slate-600 hover:bg-slate-600 hover:text-white-smoke px-4 py-3 outline-violet-900 outline-offset-4 outline-2">
                   Learn More
                 </button>
               </div>
             </div>
             <div>
               <img
-                className="max-w-full mt-16 lg:mt-0"
+                className="w-full mt-16 lg:mt-0"
                 src={pixel_6}
                 alt="Google Pixel 6"
               ></img>

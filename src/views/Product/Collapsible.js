@@ -9,13 +9,13 @@ const Collapsible = (props) => {
 
   return (
     <div>
-      <div
+      <button
         onClick={openCollapsible}
-        className=" cursor-pointer p-10 items-center flex justify-between rounded-lg mt-16 border-2 border-gray-400"
+        className="w-full p-10 items-center flex justify-between rounded-lg mt-16 border-2 border-gray-400 outline-violet-900 outline-offset-4 outline-2  "
       >
         <h1 className="text-lg sm:text-2xl font-bold">{props.title}</h1>{" "}
         <i className="text-dark-green fas fa-caret-down fa-2x"></i>
-      </div>
+      </button>
       <div
         className={`${
           open ? "" : "hidden"

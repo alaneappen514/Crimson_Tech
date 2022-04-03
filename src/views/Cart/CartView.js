@@ -62,16 +62,16 @@ const CartView = () => {
               </div>
             </div>
             {cart.length ? (
-              <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 ">
+              <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 outline-violet-900 outline-offset-4 outline-2">
                 {" "}
                 Proceed to Checkout
               </button>
             ) : (
-              <Link to="/all_products/">
-                <button className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 ">
-                  {" "}
-                  Continue Shopping
-                </button>
+              <Link
+                className="block text-center bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 outline-violet-900 outline-offset-4 outline-2"
+                to="/all_products/"
+              >
+                Continue Shopping
               </Link>
             )}
           </div>

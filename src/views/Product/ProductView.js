@@ -23,12 +23,12 @@ const ProductView = () => {
   return (
     <div className="container mx-auto p-4 my-8">
       <i className="fa fa-chevron-left"></i>
-      <p
-        className="inline-block ml-3 mb-16 hover:underline cursor-pointer"
+      <button
+        className="inline-block ml-3 mb-16 hover:underline"
         onClick={() => history(-1)}
       >
         Back
-      </p>
+      </button>
       {Object.keys(product).length !== 0 ? (
         <>
           <section>
@@ -41,9 +41,9 @@ const ProductView = () => {
                 ></img>
               </figure>
               <div className="mt-10 sm:m-10 w-full lg:w-1/2 flex flex-col justify-center p-10 rounded-3xl bg-white drop-shadow-lg relative">
-                <div className="absolute top-0 right-0 p-5">
+                <button className="absolute top-0 right-0 p-5 outline-violet-900 outline-2 ">
                   <i className="far fa-heart text-2xl sm:text-3xl"></i>
-                </div>
+                </button>
                 <div className="space-y-2">
                   <header>
                     <h1 className="text-lg sm:text-2xl   font-extrabold">
@@ -72,7 +72,7 @@ const ProductView = () => {
                   </h1>
                   <button
                     onClick={() => itemToCart()}
-                    className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 flex justify-center"
+                    className="bg-crimson-red hover:bg-crimson-light-red text-white-smoke w-full px-4 py-3 flex justify-center outline-violet-900 outline-offset-4 outline-2 "
                   >
                     {loader ? (
                       <div className="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-6 w-6 "></div>

@@ -12,13 +12,13 @@ const PromotionFeed = () => {
   }, [setRotate]);
 
   return (
-    <div className="grid lg:grid-cols-2 mt-16">
+    <div className="grid lg:grid-cols-2 gap-5 mt-16">
       {products.length > 0 ? (
         <>
           {products[0]?.slice(8, 12).map((product) => {
             return (
               <div
-                className={`flex flex-col items-center  my-2 sm:m-2 p-9 sm:p-10 md:p-14 lg:p-16 ${
+                className={`flex flex-col items-center  p-9 sm:p-10 md:p-14 lg:p-16 ${
                   product.id % rotate === 0 ? `bg-white` : `bg-dark-green`
                 } rounded-lg drop-shadow-lg `}
                 key={product.id}
@@ -42,16 +42,15 @@ const PromotionFeed = () => {
                   >
                     {product.description}
                   </p>
-                  <Link to={`/product/${product.id}`}>
-                    <button
-                      className={`border-4 ${
-                        product.id % rotate === 0
-                          ? `border-black hover:bg-black`
-                          : `border-white-smoke hover:bg-white-smoke hover:text-slate-800 text-white-smoke`
-                      } hover:text-white-smoke px-4 py-3 text-sm `}
-                    >
-                      Learn More
-                    </button>
+                  <Link
+                    className={`inline-block border-4 ${
+                      product.id % rotate === 0
+                        ? `border-black hover:bg-black`
+                        : `border-white-smoke hover:bg-white-smoke hover:text-slate-800 text-white-smoke`
+                    } hover:text-white-smoke px-4 py-3 text-sm outline-violet-900 outline-offset-4 outline-2  `}
+                    to={`/product/${product.id}`}
+                  >
+                    Learn More
                   </Link>
                 </div>
                 <img

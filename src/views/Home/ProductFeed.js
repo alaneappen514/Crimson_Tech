@@ -6,13 +6,13 @@ const ProductFeed = () => {
   const products = useSelector((state) => state.allProducts.products);
 
   return (
-    <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
+    <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-1 sm:gap-8">
       {Object.keys(products).length !== 0 ? (
         <>
           {products[0]?.slice(0, 4).map((product) => {
             return (
               <div
-                className="flex flex-col items-center m-0 sm:m-5 p-5 bg-white rounded-3xl mt-12 drop-shadow-lg"
+                className="flex flex-col items-center p-5 bg-white rounded-3xl mt-12 drop-shadow-lg"
                 key={product.id}
               >
                 {" "}
@@ -44,10 +44,11 @@ const ProductFeed = () => {
                   <h2 className="lg:text-xl text-lg font-extrabold">
                     ${product.price}
                   </h2>
-                  <Link to={`/product/${product.id}`}>
-                    <button className="border-4 border-crimson-red hover:bg-crimson-red hover:text-white-smoke my-3 px-4 py-3 text-sm ">
-                      Buy Now
-                    </button>
+                  <Link
+                    className=" block border-4 border-crimson-red hover:bg-crimson-red hover:text-white-smoke my-3 px-4 py-3 text-sm outline-violet-900 outline-offset-4 outline-2"
+                    to={`/product/${product.id}`}
+                  >
+                    Buy Now
                   </Link>
                 </div>
               </div>
